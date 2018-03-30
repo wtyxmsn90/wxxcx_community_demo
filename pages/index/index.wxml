@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view>
+<!--头部分类-->
+<view class="top-bar">
+<text class='tab_text' style="text-algin:center" bindtap=''>全部</text>
+<text class='tab_text' style="text-algin:center" bindtap=''>精华</text>
+</view>
+
+<!--列表页-->
+<view wx:for="{{partInfo}}" class='post_card'>
+  <view class='author_top'>
+    <!--用户头像与昵称-->
+    <view class='head_author'>
+      <image src='{{item.author.avatar_url}}' class='author_avatar' bindtap='author_click'></image>
+      <text class='author_nick' bindtap='author_click'>{{item.author.loginname}}</text>
+    </view>
+
+    <!--帖子标题-->
+    <view class='head_title' bindtap='author_click'style="width:100%;">
+      <text>{{item.title}}</text>
+    </view>
+</view>
+
+  <!--帖子数据信息-->
+  <view class='content_info_data'>
+    <!--帖子日期-->
+    <view class='content_create_time'>{{item.create_at}}</view>
+    <!--帖子评论与点击量-->
+    <view>
+      <image src='/images/icon/message.png' class='content_info_icon'></image>
+      <text class='content_info_text'>{{item.reply_count}}</text>
+      <image src='/images/icon/click.png' class='content_info_icon'></image>
+      <text class='content_info_text'>{{item.visit_count}}</text>
+      </view>
+    </view>
+
+  </view>
+
+</view>

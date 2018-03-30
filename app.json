@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/question/question",
+    "pages/share/share",
+    "pages/offer/offer",
+    "pages/position/position"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#43CD80",
+    "navigationBarTitleText": "CNode:nodejs专业中文社区",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "/images/icon/index.png",
+      "selectedIconPath": "/images/icon/index-hl.png"
+    },{
+      "pagePath": "pages/question/question",
+      "text": "问答",
+      "iconPath": "/images/icon/question.png",
+      "selectedIconPath": "/images/icon/question-hl.png"
+    },{
+      "pagePath": "pages/share/share",
+      "text": "分享",
+      "iconPath": "/images/icon/share.png",
+      "selectedIconPath": "/images/icon/share-hl.png"
+    },{
+      "pagePath": "pages/offer/offer",
+      "text": "招聘",
+      "iconPath": "/images/icon/offer.png",
+      "selectedIconPath": "/images/icon/offer-hl.png"
+    }]
+  }
+}

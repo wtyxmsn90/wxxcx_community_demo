@@ -1,0 +1,18 @@
+<view>
+<view class="top-bar"><text class='tab_text' style="text-algin:center">问答</text></view>
+
+    <view wx:for="{{partInfo}}" class='text_text'>
+    <image src='{{item.author.avatar_url}}' class='userinfo-avatar'></image>
+    <text>{{item.title}}</text>
+    <view>
+      <view style='float:left'>{{item.create_at}}</view>
+      <view style='float:right'>
+          <image src='/images/icon/message.png' class='part_icon'></image>
+            <text>{{item.reply_count}}</text>
+          <image src='/images/icon/click.png' class='part_icon click'></image>
+            <text>{{item.visit_count}}</text>
+      </view>
+    </view>
+  </view>
+
+</view>

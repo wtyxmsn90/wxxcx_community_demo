@@ -52,7 +52,7 @@ Page({
     if (!data) data = {};
     if (!data.page) data.page = 1;
     //部分精华
-    //if (!data.tab) data.tab = 'good';
+    if (!data.top) data.top = true;
     if (!data.limit) data.limit = 15;
     if (!data.mdrender) data.mdrender = false;
     wx.request({
@@ -65,10 +65,9 @@ Page({
       }
     })
   },
-  author_click:function(){
-    console.log("帖子详情页" + this.partInfo)
+  author_click:function(e){
     wx.navigateTo({
-      url: 'pages/position/position?&data=' + this.partInfo,
+      url: '/pages/position/position?data=' + e.currentTarget.id,
     })
   },
   getUserInfo: function(e) {

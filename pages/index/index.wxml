@@ -16,7 +16,7 @@
     </view>
 
     <!--帖子标题-->
-    <view class='head_title' bindtap='author_click'style="width:100%;">
+    <view class='head_title' bindtap='author_click' id="{{item.id}}" >
       <text>{{item.title}}</text>
     </view>
 </view>

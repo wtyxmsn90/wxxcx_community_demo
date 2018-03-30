@@ -1,18 +1,34 @@
 // pages/position/position.js
+var Api = require('../../utils/api.js');
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    contentAL:null
   
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-  
+  onLoad: function (options,datas) {
+    var content_id = options.data;
+    var that = this;
+    if (!datas) datas = {};
+    if (!datas.mdrender) datas.mdrender = true;
+    wx.request({
+      url: Api.getTopicByID(content_id, datas),
+      success: function (res) {
+        console.log(res.data.data.content)
+        that.setData({
+          contentAL : res.data.data.content
+        })
+      }
+    })
   },
 
   /**

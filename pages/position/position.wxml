@@ -1,2 +1,13 @@
 <!--pages/position/position.wxml-->
-<text>pages/position/position.wxml</text>
+<view>
+<!--文章头部-->
+<view>
+</view>
+<!--文章内容-->
+<view>
+{{contentAL}}
+</view>
+<!--文章评论-->
+<view>
+</view>
+</view>

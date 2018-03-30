@@ -73,7 +73,6 @@
   align-items: stretch;
 }
 
-
 .author_avatar {
   width: 90rpx;
   height: 90rpx;
@@ -82,20 +81,24 @@
   border: 1px solid #c4c4c4;
 }
 
-
 .author_nick{
   font-size: 10px;
   text-align: center;
   margin-left: 10px;
-
+  width: 70px;
+  white-space:nowrap;
+  overflow:hidden; 
+  text-overflow:ellipsis;
 }
 
+/*中英文换行*/
 .head_title{
   font-size: 15px;
-  width: 80%;
   margin-top: 20px;
   color: #6b6b6b;
   margin-left: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .content_create_time{
@@ -103,8 +106,8 @@
 }
 
 .content_info_icon{
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 content_clicknum{
@@ -125,13 +128,4 @@ content_clicknum{
   display: flex;
   flex-direction: row;
   align-items: stretch;
-}
-
-
-.left{
-  float: left;
-}
-
-.right{
-  float: right;
 }
